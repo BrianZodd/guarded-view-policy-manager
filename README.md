@@ -4,7 +4,7 @@ A small web app for writing viewing rules for private content. You make an accou
 
 This is a prototype of the restriction authoring part of my senior design project, Guarded View (FAU Engineering Design, project P18, sponsored by Dr. Hari Kalva and based on U.S. Patent 11,055,437 B2). The nine restriction types in the app are the ones from the patent, using the same identifiers our design documents use.
 
-**Live app:** DEPLOYED_LINK_HERE
+**Live app:** https://gvpm-bgomez-2026.netlify.app
 
 **Demo video:** VIDEO_LINK_HERE
 
@@ -77,7 +77,7 @@ You need Node.js 20 or newer and a free Supabase account.
 
 1. Clone the repo and install dependencies:
    ```bash
-   git clone <this repo's URL>
+   git clone https://github.com/BrianZodd/guarded-view-policy-manager.git
    cd guarded-view-policy-manager
    npm install
    ```
