@@ -27,6 +27,7 @@ export default function ItemForm({ item, onSaved, onCancel }: Props) {
   const [error, setError] = useState<string | null>(null)
 
   function toggle(type: RestrictionType) {
+    setError(null)
     setSelection((prev) => {
       const next = { ...prev }
       if (type in next) delete next[type]
