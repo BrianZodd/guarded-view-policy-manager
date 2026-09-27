@@ -14,13 +14,12 @@ export default function Dashboard({ session }: { session: Session }) {
   const [search, setSearch] = useState('')
 
   const load = useCallback(async () => {
-    setError(null)
     const { data, error } = await supabase
       .from('shared_items')
       .select('*, item_restrictions(*)')
       .order('created_at', { ascending: false })
-    if (error) setError(error.message)
-    else setItems(data as SharedItem[])
+    setError(error ? error.message : null)
+    if (!error) setItems(data as SharedItem[])
     setLoading(false)
   }, [])
 
