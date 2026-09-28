@@ -6,7 +6,7 @@ This is a prototype of the restriction authoring part of my senior design projec
 
 **Live app:** https://gvpm-bgomez-2026.netlify.app
 
-**Demo video:** VIDEO_LINK_HERE
+**Demo video:** https://www.youtube.com/watch?v=_w9qhbG_WMo
 
 ## What it does
 
