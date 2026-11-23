@@ -1,3 +1,18 @@
+<p align="center">
+  <img src=".github/readme-banner.svg" alt="Guarded View Policy Manager — Author patent-based viewing restrictions for shared content." width="100%">
+</p>
+
+<p align="center">
+  <!-- stack badges, one per line, in the order: languages → frameworks/runtimes → data/infra → tooling -->
+  <img alt="TypeScript" src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
+  <img alt="React" src="https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black">
+  <img alt="Vite" src="https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=white">
+  <img alt="Supabase" src="https://img.shields.io/badge/-Supabase-3FCF8E?style=flat-square&logo=supabase&logoColor=black">
+  <img alt="PostgreSQL" src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
+  <img alt="Netlify" src="https://img.shields.io/badge/-Netlify-00C7B7?style=flat-square&logo=netlify&logoColor=black">
+  <img alt="Oxlint" src="https://img.shields.io/badge/-Oxlint-5C6BC0?style=flat-square">
+</p>
+
 # Guarded View Policy Manager
 
 A small web app for writing viewing rules for private content. You make an account, create a "shared item" (a photo, a document, a message, whatever you'd be sending someone), say who it's for, and attach the viewing restrictions the recipient has to meet before it can be shown, like "only when they're alone" or "never when Eve is in the room."
@@ -39,6 +54,7 @@ This app only authors and stores the rules. The part that actually uses the came
 - **Supabase** for the database (PostgreSQL) and user authentication, through `@supabase/supabase-js`
 - **Row level security** policies in Postgres so users can only read and write their own rows
 - **Netlify** for hosting
+- **Oxlint** for linting
 - **Git and GitHub** for version control
 
 ## Project structure
@@ -73,7 +89,7 @@ Two tables, one to many:
 
 ## Setup instructions
 
-You need Node.js 20 or newer and a free Supabase account.
+You need Node.js 20.19 or newer and a free Supabase account.
 
 1. Clone the repo and install dependencies:
    ```bash
@@ -92,7 +108,7 @@ You need Node.js 20 or newer and a free Supabase account.
    ```bash
    npm run dev
    ```
-   then open http://localhost:5173.
+   then open http://localhost:5173. `npm run lint` runs the linter.
 6. To build for deployment:
    ```bash
    npm run build
